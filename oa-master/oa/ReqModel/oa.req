@@ -1,0 +1,1001 @@
+UseCaseModel OA { UseCaseContext ApplicantService { UC :: login definedBySSD(LoginSSD) relatedService(LoginService) } UseCaseContext AdminService { UC :: processApplication definedBySSD(ProcessApplicationSSD) relatedService(ProcessApplicationService) } UseCaseContext ApproveService { UC :: viewUsage definedBySSD(ViewUsageSSD) relatedService(ViewUsageService) } UseCaseContext MessageService { } UseCaseContext AccountService { UC :: manageUser include addUser, deleteUser, editUser UC :: deleteUser definedBySSD(DeleteUserSSD) relatedService(DeleteUserService) UC :: addUser definedBySSD(AddUserSSD) relatedService(AddUserService) UC :: editUser definedBySSD(EditUserSSD) relatedService(EditUserService) UC :: modifyInfo definedBySSD(ModifyInfoSSD) relatedService(ModifyInfoService) } UseCaseContext ClassroomService { UC :: createApplication definedBySSD(CreateApplicationSSD) relatedService(CreateApplicationService) UC :: withdrawApplication definedBySSD(WithdrawApplicationSSD) relatedService(WithdrawApplicationService) }
+
+	Actor Applicant {
+		viewUsage
+		createApplication
+		withdrawApplication
+		login
+		modifyInfo
+	}
+
+	Actor Admin {
+		addUser
+		deleteUser
+		editUser
+		processApplication
+		viewUsage
+		login
+	manageUser
+	}
+
+	Actor Approve {
+		viewUsage
+		createApplication
+		withdrawApplication
+		login
+		modifyInfo
+	}
+
+	Interaction ProcessApplicationSSD {
+
+		[Participants: Admin ProcessApplicationService]
+
+		CallMessage::ProcessApplicationSSDCallMessage1(processByAdmin ProcessApplicationSSDCallMessage1SendingEnd -> ProcessApplicationSSDExecution1StartEnd)
+		ReturnMessage::ProcessApplicationSSDCallMessage1Return(ProcessApplicationSSDExecution1FinishEnd -> ProcessApplicationSSDCallMessage1ReturnReceivingEnd ProcessApplicationSSDCallMessage1)
+
+		Execution::ProcessApplicationSSDExecution1(ProcessApplicationService ProcessApplicationSSDExecution1StartEnd ProcessApplicationSSDExecution1FinishEnd)
+
+		MessageEnd::ProcessApplicationSSDCallMessage1SendingEnd(Admin ProcessApplicationSSDCallMessage1)
+		ExecutionEnd::ProcessApplicationSSDExecution1StartEnd(ProcessApplicationService ProcessApplicationSSDExecution1)
+		ExecutionEnd::ProcessApplicationSSDExecution1FinishEnd(ProcessApplicationService ProcessApplicationSSDExecution1)
+		MessageEnd::ProcessApplicationSSDCallMessage1ReturnReceivingEnd(Admin ProcessApplicationSSDCallMessage1Return)
+
+	}
+
+	Interaction LoginSSD {
+
+		[Participants: Applicant Admin Approve LoginService]
+
+		CallMessage::LoginSSDCallMessage1(inputInfo LoginSSDCallMessage1SendingEnd -> LoginSSDExecution1StartEnd)
+		ReturnMessage::LoginSSDCallMessage1Return(LoginSSDExecution1FinishEnd -> LoginSSDCallMessage1ReturnReceivingEnd LoginSSDCallMessage1)
+		CallMessage::LoginSSDCallMessage3(loginSystem LoginSSDCallMessage3SendingEnd -> LoginSSDExecution2StartEnd)
+		ReturnMessage::LoginSSDCallMessage3Return(LoginSSDExecution2FinishEnd -> LoginSSDCallMessage3ReturnReceivingEnd LoginSSDCallMessage3)
+		CallMessage::LoginSSDCallMessage5(inputByAdmin LoginSSDCallMessage5SendingEnd -> LoginSSDExecution3StartEnd)
+		ReturnMessage::LoginSSDCallMessage5Return(LoginSSDExecution3FinishEnd -> LoginSSDCallMessage5ReturnReceivingEnd LoginSSDCallMessage5)
+		CallMessage::LoginSSDCallMessage7(loginByAdmin LoginSSDCallMessage7SendingEnd -> LoginSSDExecution4StartEnd)
+		ReturnMessage::LoginSSDCallMessage7Return(LoginSSDExecution4FinishEnd -> LoginSSDCallMessage7ReturnReceivingEnd LoginSSDCallMessage7)
+		CallMessage::LoginSSDCallMessage9(inputByApplicant LoginSSDCallMessage9SendingEnd -> LoginSSDExecution5StartEnd)
+		ReturnMessage::LoginSSDCallMessage9Return(LoginSSDExecution5FinishEnd -> LoginSSDCallMessage9ReturnReceivingEnd LoginSSDCallMessage9)
+		CallMessage::LoginSSDCallMessage11(loginByApplicant LoginSSDCallMessage11SendingEnd -> LoginSSDExecution6StartEnd)
+		ReturnMessage::LoginSSDCallMessage11Return(LoginSSDExecution6FinishEnd -> LoginSSDCallMessage11ReturnReceivingEnd LoginSSDCallMessage11)
+
+		Execution::LoginSSDExecution1(LoginService LoginSSDExecution1StartEnd LoginSSDExecution1FinishEnd)
+		Execution::LoginSSDExecution2(LoginService LoginSSDExecution2StartEnd LoginSSDExecution2FinishEnd)
+		Execution::LoginSSDExecution3(LoginService LoginSSDExecution3StartEnd LoginSSDExecution3FinishEnd)
+		Execution::LoginSSDExecution4(LoginService LoginSSDExecution4StartEnd LoginSSDExecution4FinishEnd)
+		Execution::LoginSSDExecution5(LoginService LoginSSDExecution5StartEnd LoginSSDExecution5FinishEnd)
+		Execution::LoginSSDExecution6(LoginService LoginSSDExecution6StartEnd LoginSSDExecution6FinishEnd)
+
+		MessageEnd::LoginSSDCallMessage1SendingEnd(Approve LoginSSDCallMessage1)
+		ExecutionEnd::LoginSSDExecution1StartEnd(LoginService LoginSSDExecution1)
+		ExecutionEnd::LoginSSDExecution1FinishEnd(LoginService LoginSSDExecution1)
+		MessageEnd::LoginSSDCallMessage1ReturnReceivingEnd(Approve LoginSSDCallMessage1Return)
+		MessageEnd::LoginSSDCallMessage3SendingEnd(Approve LoginSSDCallMessage3)
+		ExecutionEnd::LoginSSDExecution2StartEnd(LoginService LoginSSDExecution2)
+		ExecutionEnd::LoginSSDExecution2FinishEnd(LoginService LoginSSDExecution2)
+		MessageEnd::LoginSSDCallMessage3ReturnReceivingEnd(Approve LoginSSDCallMessage3Return)
+		MessageEnd::LoginSSDCallMessage5SendingEnd(Admin LoginSSDCallMessage5)
+		ExecutionEnd::LoginSSDExecution3StartEnd(LoginService LoginSSDExecution3)
+		ExecutionEnd::LoginSSDExecution3FinishEnd(LoginService LoginSSDExecution3)
+		MessageEnd::LoginSSDCallMessage5ReturnReceivingEnd(Admin LoginSSDCallMessage5Return)
+		MessageEnd::LoginSSDCallMessage7SendingEnd(Admin LoginSSDCallMessage7)
+		ExecutionEnd::LoginSSDExecution4StartEnd(LoginService LoginSSDExecution4)
+		ExecutionEnd::LoginSSDExecution4FinishEnd(LoginService LoginSSDExecution4)
+		MessageEnd::LoginSSDCallMessage7ReturnReceivingEnd(Admin LoginSSDCallMessage7Return)
+		MessageEnd::LoginSSDCallMessage9SendingEnd(Applicant LoginSSDCallMessage9)
+		ExecutionEnd::LoginSSDExecution5StartEnd(LoginService LoginSSDExecution5)
+		ExecutionEnd::LoginSSDExecution5FinishEnd(LoginService LoginSSDExecution5)
+		MessageEnd::LoginSSDCallMessage9ReturnReceivingEnd(Applicant LoginSSDCallMessage9Return)
+		MessageEnd::LoginSSDCallMessage11SendingEnd(Applicant LoginSSDCallMessage11)
+		ExecutionEnd::LoginSSDExecution6StartEnd(LoginService LoginSSDExecution6)
+		ExecutionEnd::LoginSSDExecution6FinishEnd(LoginService LoginSSDExecution6)
+		MessageEnd::LoginSSDCallMessage11ReturnReceivingEnd(Applicant LoginSSDCallMessage11Return)
+
+	}
+
+	Interaction ViewUsageSSD {
+
+		[Participants: Applicant Admin Approve ViewUsageService]
+
+		CallMessage::ViewUsageSSDCallMessage1(viewByApprove ViewUsageSSDCallMessage1SendingEnd -> ViewUsageSSDExecution1StartEnd)
+		ReturnMessage::ViewUsageSSDCallMessage1Return(ViewUsageSSDExecution1FinishEnd -> ViewUsageSSDCallMessage1ReturnReceivingEnd ViewUsageSSDCallMessage1)
+		CallMessage::ViewUsageSSDCallMessage3(viewByAdmin ViewUsageSSDCallMessage3SendingEnd -> ViewUsageSSDExecution2StartEnd)
+		ReturnMessage::ViewUsageSSDCallMessage3Return(ViewUsageSSDExecution2FinishEnd -> ViewUsageSSDCallMessage3ReturnReceivingEnd ViewUsageSSDCallMessage3)
+		CallMessage::ViewUsageSSDCallMessage5(viewByApplicant ViewUsageSSDCallMessage5SendingEnd -> ViewUsageSSDExecution3StartEnd)
+		ReturnMessage::ViewUsageSSDCallMessage5Return(ViewUsageSSDExecution3FinishEnd -> ViewUsageSSDCallMessage5ReturnReceivingEnd ViewUsageSSDCallMessage5)
+
+		Execution::ViewUsageSSDExecution1(ViewUsageService ViewUsageSSDExecution1StartEnd ViewUsageSSDExecution1FinishEnd)
+		Execution::ViewUsageSSDExecution2(ViewUsageService ViewUsageSSDExecution2StartEnd ViewUsageSSDExecution2FinishEnd)
+		Execution::ViewUsageSSDExecution3(ViewUsageService ViewUsageSSDExecution3StartEnd ViewUsageSSDExecution3FinishEnd)
+
+		MessageEnd::ViewUsageSSDCallMessage1SendingEnd(Approve ViewUsageSSDCallMessage1)
+		ExecutionEnd::ViewUsageSSDExecution1StartEnd(ViewUsageService ViewUsageSSDExecution1)
+		ExecutionEnd::ViewUsageSSDExecution1FinishEnd(ViewUsageService ViewUsageSSDExecution1)
+		MessageEnd::ViewUsageSSDCallMessage1ReturnReceivingEnd(Approve ViewUsageSSDCallMessage1Return)
+		MessageEnd::ViewUsageSSDCallMessage3SendingEnd(Admin ViewUsageSSDCallMessage3)
+		ExecutionEnd::ViewUsageSSDExecution2StartEnd(ViewUsageService ViewUsageSSDExecution2)
+		ExecutionEnd::ViewUsageSSDExecution2FinishEnd(ViewUsageService ViewUsageSSDExecution2)
+		MessageEnd::ViewUsageSSDCallMessage3ReturnReceivingEnd(Admin ViewUsageSSDCallMessage3Return)
+		MessageEnd::ViewUsageSSDCallMessage5SendingEnd(Applicant ViewUsageSSDCallMessage5)
+		ExecutionEnd::ViewUsageSSDExecution3StartEnd(ViewUsageService ViewUsageSSDExecution3)
+		ExecutionEnd::ViewUsageSSDExecution3FinishEnd(ViewUsageService ViewUsageSSDExecution3)
+		MessageEnd::ViewUsageSSDCallMessage5ReturnReceivingEnd(Applicant ViewUsageSSDCallMessage5Return)
+
+	}
+
+	Interaction CreateApplicationSSD {
+
+		[Participants: Applicant Approve CreateApplicationService]
+
+		CallMessage::CreateApplicationSSDCallMessage1(inputByApprove CreateApplicationSSDCallMessage1SendingEnd -> CreateApplicationSSDExecution1StartEnd)
+		ReturnMessage::CreateApplicationSSDCallMessage1Return(CreateApplicationSSDExecution1FinishEnd -> CreateApplicationSSDCallMessage1ReturnReceivingEnd CreateApplicationSSDCallMessage1)
+		CallMessage::CreateApplicationSSDCallMessage3(createByApprove CreateApplicationSSDCallMessage3SendingEnd -> CreateApplicationSSDExecution2StartEnd)
+		ReturnMessage::CreateApplicationSSDCallMessage3Return(CreateApplicationSSDExecution2FinishEnd -> CreateApplicationSSDCallMessage3ReturnReceivingEnd CreateApplicationSSDCallMessage3)
+		CallMessage::CreateApplicationSSDCallMessage5(inputCreateApplicant CreateApplicationSSDCallMessage5SendingEnd -> CreateApplicationSSDExecution3StartEnd)
+		ReturnMessage::CreateApplicationSSDCallMessage5Return(CreateApplicationSSDExecution3FinishEnd -> CreateApplicationSSDCallMessage5ReturnReceivingEnd CreateApplicationSSDCallMessage5)
+		CallMessage::CreateApplicationSSDCallMessage7(createByApplicant CreateApplicationSSDCallMessage7SendingEnd -> CreateApplicationSSDExecution4StartEnd)
+		ReturnMessage::CreateApplicationSSDCallMessage7Return(CreateApplicationSSDExecution4FinishEnd -> CreateApplicationSSDCallMessage7ReturnReceivingEnd CreateApplicationSSDCallMessage7)
+
+		Execution::CreateApplicationSSDExecution1(CreateApplicationService CreateApplicationSSDExecution1StartEnd CreateApplicationSSDExecution1FinishEnd)
+		Execution::CreateApplicationSSDExecution2(CreateApplicationService CreateApplicationSSDExecution2StartEnd CreateApplicationSSDExecution2FinishEnd)
+		Execution::CreateApplicationSSDExecution3(CreateApplicationService CreateApplicationSSDExecution3StartEnd CreateApplicationSSDExecution3FinishEnd)
+		Execution::CreateApplicationSSDExecution4(CreateApplicationService CreateApplicationSSDExecution4StartEnd CreateApplicationSSDExecution4FinishEnd)
+
+		MessageEnd::CreateApplicationSSDCallMessage1SendingEnd(Approve CreateApplicationSSDCallMessage1)
+		ExecutionEnd::CreateApplicationSSDExecution1StartEnd(CreateApplicationService CreateApplicationSSDExecution1)
+		ExecutionEnd::CreateApplicationSSDExecution1FinishEnd(CreateApplicationService CreateApplicationSSDExecution1)
+		MessageEnd::CreateApplicationSSDCallMessage1ReturnReceivingEnd(Approve CreateApplicationSSDCallMessage1Return)
+		MessageEnd::CreateApplicationSSDCallMessage3SendingEnd(Approve CreateApplicationSSDCallMessage3)
+		ExecutionEnd::CreateApplicationSSDExecution2StartEnd(CreateApplicationService CreateApplicationSSDExecution2)
+		ExecutionEnd::CreateApplicationSSDExecution2FinishEnd(CreateApplicationService CreateApplicationSSDExecution2)
+		MessageEnd::CreateApplicationSSDCallMessage3ReturnReceivingEnd(Approve CreateApplicationSSDCallMessage3Return)
+		MessageEnd::CreateApplicationSSDCallMessage5SendingEnd(Applicant CreateApplicationSSDCallMessage5)
+		ExecutionEnd::CreateApplicationSSDExecution3StartEnd(CreateApplicationService CreateApplicationSSDExecution3)
+		ExecutionEnd::CreateApplicationSSDExecution3FinishEnd(CreateApplicationService CreateApplicationSSDExecution3)
+		MessageEnd::CreateApplicationSSDCallMessage5ReturnReceivingEnd(Applicant CreateApplicationSSDCallMessage5Return)
+		MessageEnd::CreateApplicationSSDCallMessage7SendingEnd(Applicant CreateApplicationSSDCallMessage7)
+		ExecutionEnd::CreateApplicationSSDExecution4StartEnd(CreateApplicationService CreateApplicationSSDExecution4)
+		ExecutionEnd::CreateApplicationSSDExecution4FinishEnd(CreateApplicationService CreateApplicationSSDExecution4)
+		MessageEnd::CreateApplicationSSDCallMessage7ReturnReceivingEnd(Applicant CreateApplicationSSDCallMessage7Return)
+
+	}
+
+	Interaction WithdrawApplicationSSD {
+
+		[Participants: Applicant Approve WithdrawApplicationService]
+
+		CallMessage::WithdrawApplicationSSDCallMessage1(inputWithdrawInfoT WithdrawApplicationSSDCallMessage1SendingEnd -> WithdrawApplicationSSDExecution1StartEnd)
+		ReturnMessage::WithdrawApplicationSSDCallMessage1Return(WithdrawApplicationSSDExecution1FinishEnd -> WithdrawApplicationSSDCallMessage1ReturnReceivingEnd WithdrawApplicationSSDCallMessage1)
+		CallMessage::WithdrawApplicationSSDCallMessage3(withdrawByApprove WithdrawApplicationSSDCallMessage3SendingEnd -> WithdrawApplicationSSDExecution2StartEnd)
+		ReturnMessage::WithdrawApplicationSSDCallMessage3Return(WithdrawApplicationSSDExecution2FinishEnd -> WithdrawApplicationSSDCallMessage3ReturnReceivingEnd WithdrawApplicationSSDCallMessage3)
+		CallMessage::WithdrawApplicationSSDCallMessage5(inputWithdrawInfoS WithdrawApplicationSSDCallMessage5SendingEnd -> WithdrawApplicationSSDExecution3StartEnd)
+		ReturnMessage::WithdrawApplicationSSDCallMessage5Return(WithdrawApplicationSSDExecution3FinishEnd -> WithdrawApplicationSSDCallMessage5ReturnReceivingEnd WithdrawApplicationSSDCallMessage5)
+		CallMessage::WithdrawApplicationSSDCallMessage7(withdrawByApplicant WithdrawApplicationSSDCallMessage7SendingEnd -> WithdrawApplicationSSDExecution4StartEnd)
+		ReturnMessage::WithdrawApplicationSSDCallMessage7Return(WithdrawApplicationSSDExecution4FinishEnd -> WithdrawApplicationSSDCallMessage7ReturnReceivingEnd WithdrawApplicationSSDCallMessage7)
+
+		Execution::WithdrawApplicationSSDExecution1(WithdrawApplicationService WithdrawApplicationSSDExecution1StartEnd WithdrawApplicationSSDExecution1FinishEnd)
+		Execution::WithdrawApplicationSSDExecution2(WithdrawApplicationService WithdrawApplicationSSDExecution2StartEnd WithdrawApplicationSSDExecution2FinishEnd)
+		Execution::WithdrawApplicationSSDExecution3(WithdrawApplicationService WithdrawApplicationSSDExecution3StartEnd WithdrawApplicationSSDExecution3FinishEnd)
+		Execution::WithdrawApplicationSSDExecution4(WithdrawApplicationService WithdrawApplicationSSDExecution4StartEnd WithdrawApplicationSSDExecution4FinishEnd)
+
+		MessageEnd::WithdrawApplicationSSDCallMessage1SendingEnd(Approve WithdrawApplicationSSDCallMessage1)
+		ExecutionEnd::WithdrawApplicationSSDExecution1StartEnd(WithdrawApplicationService WithdrawApplicationSSDExecution1)
+		ExecutionEnd::WithdrawApplicationSSDExecution1FinishEnd(WithdrawApplicationService WithdrawApplicationSSDExecution1)
+		MessageEnd::WithdrawApplicationSSDCallMessage1ReturnReceivingEnd(Approve WithdrawApplicationSSDCallMessage1Return)
+		MessageEnd::WithdrawApplicationSSDCallMessage3SendingEnd(Approve WithdrawApplicationSSDCallMessage3)
+		ExecutionEnd::WithdrawApplicationSSDExecution2StartEnd(WithdrawApplicationService WithdrawApplicationSSDExecution2)
+		ExecutionEnd::WithdrawApplicationSSDExecution2FinishEnd(WithdrawApplicationService WithdrawApplicationSSDExecution2)
+		MessageEnd::WithdrawApplicationSSDCallMessage3ReturnReceivingEnd(Approve WithdrawApplicationSSDCallMessage3Return)
+		MessageEnd::WithdrawApplicationSSDCallMessage5SendingEnd(Applicant WithdrawApplicationSSDCallMessage5)
+		ExecutionEnd::WithdrawApplicationSSDExecution3StartEnd(WithdrawApplicationService WithdrawApplicationSSDExecution3)
+		ExecutionEnd::WithdrawApplicationSSDExecution3FinishEnd(WithdrawApplicationService WithdrawApplicationSSDExecution3)
+		MessageEnd::WithdrawApplicationSSDCallMessage5ReturnReceivingEnd(Applicant WithdrawApplicationSSDCallMessage5Return)
+		MessageEnd::WithdrawApplicationSSDCallMessage7SendingEnd(Applicant WithdrawApplicationSSDCallMessage7)
+		ExecutionEnd::WithdrawApplicationSSDExecution4StartEnd(WithdrawApplicationService WithdrawApplicationSSDExecution4)
+		ExecutionEnd::WithdrawApplicationSSDExecution4FinishEnd(WithdrawApplicationService WithdrawApplicationSSDExecution4)
+		MessageEnd::WithdrawApplicationSSDCallMessage7ReturnReceivingEnd(Applicant WithdrawApplicationSSDCallMessage7Return)
+
+	}
+
+	Interaction ModifyInfoSSD {
+
+		[Participants: Applicant Approve ModifyInfoService]
+
+		CallMessage::ModifyInfoSSDCallMessage1(modifyByApprove ModifyInfoSSDCallMessage1SendingEnd -> ModifyInfoSSDExecution1StartEnd)
+		ReturnMessage::ModifyInfoSSDCallMessage1Return(ModifyInfoSSDExecution1FinishEnd -> ModifyInfoSSDCallMessage1ReturnReceivingEnd ModifyInfoSSDCallMessage1)
+		CallMessage::ModifyInfoSSDCallMessage3(modifyByApplicant ModifyInfoSSDCallMessage3SendingEnd -> ModifyInfoSSDExecution2StartEnd)
+		ReturnMessage::ModifyInfoSSDCallMessage3Return(ModifyInfoSSDExecution2FinishEnd -> ModifyInfoSSDCallMessage3ReturnReceivingEnd ModifyInfoSSDCallMessage3)
+
+		Execution::ModifyInfoSSDExecution1(ModifyInfoService ModifyInfoSSDExecution1StartEnd ModifyInfoSSDExecution1FinishEnd)
+		Execution::ModifyInfoSSDExecution2(ModifyInfoService ModifyInfoSSDExecution2StartEnd ModifyInfoSSDExecution2FinishEnd)
+
+		MessageEnd::ModifyInfoSSDCallMessage1SendingEnd(Approve ModifyInfoSSDCallMessage1)
+		ExecutionEnd::ModifyInfoSSDExecution1StartEnd(ModifyInfoService ModifyInfoSSDExecution1)
+		ExecutionEnd::ModifyInfoSSDExecution1FinishEnd(ModifyInfoService ModifyInfoSSDExecution1)
+		MessageEnd::ModifyInfoSSDCallMessage1ReturnReceivingEnd(Approve ModifyInfoSSDCallMessage1Return)
+		MessageEnd::ModifyInfoSSDCallMessage3SendingEnd(Applicant ModifyInfoSSDCallMessage3)
+		ExecutionEnd::ModifyInfoSSDExecution2StartEnd(ModifyInfoService ModifyInfoSSDExecution2)
+		ExecutionEnd::ModifyInfoSSDExecution2FinishEnd(ModifyInfoService ModifyInfoSSDExecution2)
+		MessageEnd::ModifyInfoSSDCallMessage3ReturnReceivingEnd(Applicant ModifyInfoSSDCallMessage3Return)
+
+	}
+
+	Interaction EditUserSSD {
+
+		[Participants: Admin EditUserService]
+
+		CallMessage::EditUserSSDCallMessage1(editApprove EditUserSSDCallMessage1SendingEnd -> EditUserSSDExecution1StartEnd)
+		ReturnMessage::EditUserSSDCallMessage1Return(EditUserSSDExecution1FinishEnd -> EditUserSSDCallMessage1ReturnReceivingEnd EditUserSSDCallMessage1)
+		CallMessage::EditUserSSDCallMessage3(editApplicant EditUserSSDCallMessage3SendingEnd -> EditUserSSDExecution2StartEnd)
+		ReturnMessage::EditUserSSDCallMessage3Return(EditUserSSDExecution2FinishEnd -> EditUserSSDCallMessage3ReturnReceivingEnd EditUserSSDCallMessage3)
+		CallMessage::EditUserSSDCallMessage5(editSelf EditUserSSDCallMessage5SendingEnd -> EditUserSSDExecution3StartEnd)
+		ReturnMessage::EditUserSSDCallMessage5Return(EditUserSSDExecution3FinishEnd -> EditUserSSDCallMessage5ReturnReceivingEnd EditUserSSDCallMessage5)
+
+		Execution::EditUserSSDExecution1(EditUserService EditUserSSDExecution1StartEnd EditUserSSDExecution1FinishEnd)
+		Execution::EditUserSSDExecution2(EditUserService EditUserSSDExecution2StartEnd EditUserSSDExecution2FinishEnd)
+		Execution::EditUserSSDExecution3(EditUserService EditUserSSDExecution3StartEnd EditUserSSDExecution3FinishEnd)
+
+		MessageEnd::EditUserSSDCallMessage1SendingEnd(Admin EditUserSSDCallMessage1)
+		ExecutionEnd::EditUserSSDExecution1StartEnd(EditUserService EditUserSSDExecution1)
+		ExecutionEnd::EditUserSSDExecution1FinishEnd(EditUserService EditUserSSDExecution1)
+		MessageEnd::EditUserSSDCallMessage1ReturnReceivingEnd(Admin EditUserSSDCallMessage1Return)
+		MessageEnd::EditUserSSDCallMessage3SendingEnd(Admin EditUserSSDCallMessage3)
+		ExecutionEnd::EditUserSSDExecution2StartEnd(EditUserService EditUserSSDExecution2)
+		ExecutionEnd::EditUserSSDExecution2FinishEnd(EditUserService EditUserSSDExecution2)
+		MessageEnd::EditUserSSDCallMessage3ReturnReceivingEnd(Admin EditUserSSDCallMessage3Return)
+		MessageEnd::EditUserSSDCallMessage5SendingEnd(Admin EditUserSSDCallMessage5)
+		ExecutionEnd::EditUserSSDExecution3StartEnd(EditUserService EditUserSSDExecution3)
+		ExecutionEnd::EditUserSSDExecution3FinishEnd(EditUserService EditUserSSDExecution3)
+		MessageEnd::EditUserSSDCallMessage5ReturnReceivingEnd(Admin EditUserSSDCallMessage5Return)
+
+	}
+
+	Interaction AddUserSSD {
+
+		[Participants: Admin AddUserService]
+
+		CallMessage::AddUserSSDCallMessage1(addApprove AddUserSSDCallMessage1SendingEnd -> AddUserSSDExecution1StartEnd)
+		ReturnMessage::AddUserSSDCallMessage1Return(AddUserSSDExecution1FinishEnd -> AddUserSSDCallMessage1ReturnReceivingEnd AddUserSSDCallMessage1)
+		CallMessage::AddUserSSDCallMessage3(addApplicant AddUserSSDCallMessage3SendingEnd -> AddUserSSDExecution2StartEnd)
+		ReturnMessage::AddUserSSDCallMessage3Return(AddUserSSDExecution2FinishEnd -> AddUserSSDCallMessage3ReturnReceivingEnd AddUserSSDCallMessage3)
+		CallMessage::AddUserSSDCallMessage5(addAdmin AddUserSSDCallMessage5SendingEnd -> AddUserSSDExecution3StartEnd)
+		ReturnMessage::AddUserSSDCallMessage5Return(AddUserSSDExecution3FinishEnd -> AddUserSSDCallMessage5ReturnReceivingEnd AddUserSSDCallMessage5)
+
+		Execution::AddUserSSDExecution1(AddUserService AddUserSSDExecution1StartEnd AddUserSSDExecution1FinishEnd)
+		Execution::AddUserSSDExecution2(AddUserService AddUserSSDExecution2StartEnd AddUserSSDExecution2FinishEnd)
+		Execution::AddUserSSDExecution3(AddUserService AddUserSSDExecution3StartEnd AddUserSSDExecution3FinishEnd)
+
+		MessageEnd::AddUserSSDCallMessage1SendingEnd(Admin AddUserSSDCallMessage1)
+		ExecutionEnd::AddUserSSDExecution1StartEnd(AddUserService AddUserSSDExecution1)
+		ExecutionEnd::AddUserSSDExecution1FinishEnd(AddUserService AddUserSSDExecution1)
+		MessageEnd::AddUserSSDCallMessage1ReturnReceivingEnd(Admin AddUserSSDCallMessage1Return)
+		MessageEnd::AddUserSSDCallMessage3SendingEnd(Admin AddUserSSDCallMessage3)
+		ExecutionEnd::AddUserSSDExecution2StartEnd(AddUserService AddUserSSDExecution2)
+		ExecutionEnd::AddUserSSDExecution2FinishEnd(AddUserService AddUserSSDExecution2)
+		MessageEnd::AddUserSSDCallMessage3ReturnReceivingEnd(Admin AddUserSSDCallMessage3Return)
+		MessageEnd::AddUserSSDCallMessage5SendingEnd(Admin AddUserSSDCallMessage5)
+		ExecutionEnd::AddUserSSDExecution3StartEnd(AddUserService AddUserSSDExecution3)
+		ExecutionEnd::AddUserSSDExecution3FinishEnd(AddUserService AddUserSSDExecution3)
+		MessageEnd::AddUserSSDCallMessage5ReturnReceivingEnd(Admin AddUserSSDCallMessage5Return)
+
+	}
+
+	Interaction DeleteUserSSD {
+
+		[Participants: Admin DeleteUserService]
+
+		CallMessage::DeleteUserSSDCallMessage1(deleteByAdmin DeleteUserSSDCallMessage1SendingEnd -> DeleteUserSSDExecution1StartEnd)
+		ReturnMessage::DeleteUserSSDCallMessage1Return(DeleteUserSSDExecution1FinishEnd -> DeleteUserSSDCallMessage1ReturnReceivingEnd DeleteUserSSDCallMessage1)
+
+		Execution::DeleteUserSSDExecution1(DeleteUserService DeleteUserSSDExecution1StartEnd DeleteUserSSDExecution1FinishEnd)
+
+		MessageEnd::DeleteUserSSDCallMessage1SendingEnd(Admin DeleteUserSSDCallMessage1)
+		ExecutionEnd::DeleteUserSSDExecution1StartEnd(DeleteUserService DeleteUserSSDExecution1)
+		ExecutionEnd::DeleteUserSSDExecution1FinishEnd(DeleteUserService DeleteUserSSDExecution1)
+		MessageEnd::DeleteUserSSDCallMessage1ReturnReceivingEnd(Admin DeleteUserSSDCallMessage1Return)
+
+	}
+
+	Service OASystem {
+
+		[Operation]
+		manageUser()
+		addUser()
+		deleteUser()
+		editUser()
+		processApplication()
+		createApplication()
+		viewUsage()
+		withdrawApplication()
+		login()
+		modifyInfo()
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service ProcessApplicationService {
+
+		[Operation]
+		processByAdmin(applicationID, accountID, password)
+
+	}
+
+	Service LoginService {
+
+		[Operation]
+		inputInfo(accountID, password)
+		loginSystem()
+		inputByAdmin(accountID, password)
+		loginByAdmin()
+		inputByApplicant(accountID, password)
+		loginByApplicant()
+
+	}
+
+	Service ViewUsageService {
+
+		[Operation]
+		viewByApprove()
+		viewByAdmin()
+		viewByApplicant()
+
+	}
+
+	Service CreateApplicationService {
+
+		[Operation]
+		inputByApprove(roomID, time)
+		createByApprove(roomID, time, accountID)
+		inputBy()
+		inputCreateApplicant(roomID, time)
+		createByApplicant(roomID, time, accountID)
+
+	}
+
+	Service WithdrawApplicationService {
+
+		[Operation]
+		inputWithdrawInfoT(applicationID)
+		withdrawByApprove()
+		inputWithdrawInfoS(applicationID)
+		withdrawByApplicant()
+
+	}
+
+	Service ModifyInfoService {
+
+		[Operation]
+		modifyByApprove(new_name, new_password, new_age, new_gender, accountID)
+		modifyByApplicant(new_name, new_password, new_age, new_gender, accountID)
+
+	}
+
+	Service EditUserService {
+
+		[Operation]
+		editApprove(new_ApproveID, new_type, new_password, accountID, adminID)
+		editApplicant(new_ApplicantID, new_type, new_password, accountID, adminID)
+		editSelf(new_name, new_age, new_gender, new_password, accountID, new_adminID)
+
+	}
+
+	Service AddUserService {
+
+		[Operation]
+		addApprove(name, age, gender, ApproveID, password, type)
+		addApplicant(name, age, gender, ApplicantID, password, type)
+		addAdmin(name, age, gender, adminID, password, type)
+
+	}
+
+	Service DeleteUserService {
+
+		[Operation]
+		deleteByAdmin(accountID, adminPassword, ad_accountID)
+
+	}
+
+	Contract OASystem::manageUser() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::addUser() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::deleteUser() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::editUser() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::processApplication() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::createApplication() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::viewUsage() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::withdrawApplication() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::login() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	// Contract ProcessApplicationService::processByAdmin() : Boolean {
+	// precondition:
+	// self.AccountIDValidated = true and
+	// self.PasswordValidated = true and
+	// self.account.oclIsUndefined() = false and
+	// self.account.Type = "管理员"
+	// postcondition:
+	// result = true
+	// }
+	Contract ProcessApplicationService::processByAdmin(applicationID : String, accountID : String, password : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			ap:Application = Application.allInstance()->any(c:Application | c.ApplicationID = applicationID)
+
+		precondition:
+			ac.oclIsUndefined() = false and
+			ap.oclIsUndefined() = false and
+			ac.Password = password and
+			ac.Type = "管理员"
+		postcondition:
+			ap.State = "已处理" and
+			result = true
+	}
+
+	Contract LoginService::inputInfo(accountID : String, password : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false
+		postcondition:
+			if
+				ac.Password = password
+			then
+				result = true
+			else
+				result = false
+			endif
+
+	}
+
+	Contract LoginService::loginSystem() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract LoginService::inputByAdmin(accountID : String, password : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false
+		postcondition:
+			if
+				ac.Password = password
+			then
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract LoginService::loginByAdmin() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract LoginService::inputByApplicant(accountID : String, password : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false
+		postcondition:
+			if
+				ac.Password = password
+			then
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract LoginService::loginByApplicant() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ViewUsageService::viewByApprove() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ViewUsageService::viewByAdmin() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ViewUsageService::viewByApplicant() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract CreateApplicationService::inputBy() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract CreateApplicationService::createByApprove(roomID : String, time : String, accountID : String) : Boolean {
+
+		precondition:
+			time.size() <= 100
+		postcondition:
+			let a:Application in
+			a.oclIsNew() and
+			a.ApplicationID = roomID and
+			a.RoomID = roomID and
+			a.AccounID = accountID and
+			a.UseTime = time and
+			a.State = "未处理" and
+			Application.allInstance()->includes(a) and
+			result = true
+
+	}
+
+	Contract CreateApplicationService::inputByApprove(roomID : String, time : String) : Boolean {
+
+		precondition:
+			time.size() <= 100
+		postcondition:
+			result = true
+	}
+
+	Contract CreateApplicationService::inputCreateApplicant(roomID : String, time : String) : Boolean {
+
+		precondition:
+			time.size() <= 100
+		postcondition:
+			result = true
+	}
+
+	Contract CreateApplicationService::createByApplicant(roomID : String, time : String, accountID : String) : Boolean {
+
+		precondition:
+			time.size() <= 100
+		postcondition:
+			let a:Application in
+			a.oclIsNew() and
+			a.ApplicationID = roomID and
+			a.RoomID = roomID and
+			a.AccounID = accountID and
+			a.UseTime = time and
+			a.State = "未处理" and
+			Application.allInstance()->includes(a) and
+			result = true
+
+	}
+
+	Contract WithdrawApplicationService::inputWithdrawInfoT(applicationID : String) : Boolean {
+
+		definition:
+			al:Application = Application.allInstance()->any(c:Application | c.ApplicationID = applicationID)
+
+		precondition:
+			al.oclIsUndefined() = false and
+			Application.allInstance()->includes(al)
+		postcondition:
+			Application.allInstance()->excludes(al) and
+			result = true
+	}
+
+	Contract WithdrawApplicationService::withdrawByApprove() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract WithdrawApplicationService::inputWithdrawInfoS(applicationID : String) : Boolean {
+
+		definition:
+			al:Application = Application.allInstance()->any(c:Application | c.ApplicationID = applicationID)
+
+		precondition:
+			al.oclIsUndefined() = false and
+			Application.allInstance()->includes(al)
+		postcondition:
+			Application.allInstance()->excludes(al) and
+			result = true
+	}
+
+	Contract WithdrawApplicationService::withdrawByApplicant() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			return = true
+	}
+
+	Contract OASystem::modifyInfo() : Boolean {
+
+		precondition:
+			true
+		postcondition:
+			result = true
+	}
+
+	Contract ModifyInfoService::modifyByApprove(new_name : String, new_password : String, new_age : Integer, new_gender : String, accountID : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			t:Approve = Approve.allInstance()->any(c:Approve | c.AccountID = accountID)
+
+		precondition:
+			t.oclIsUndefined() = false and
+			ac.oclIsUndefined() = false and
+			new_name.size() < 20 and
+			new_password.size() < 20 and
+			(new_age > 0 and
+				new_age < 150
+			) and
+			(new_gender = "男" or
+				new_gender = "女"
+			)
+		postcondition:
+			ac.Password = new_password and
+			t.Name = new_name and
+			t.Age = new_age and
+			t.Gender = new_gender and
+			result = true
+	}
+
+	Contract ModifyInfoService::modifyByApplicant(new_name : String, new_password : String, new_age : Integer, new_gender : String, accountID : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			t:Applicant = Applicant.allInstance()->any(c:Applicant | c.AccountID = self.account.AccountID)
+
+		precondition:
+			t.oclIsUndefined() = false and
+			ac.oclIsUndefined() = false and
+			new_name.size() < 20 and
+			new_password.size() < 20 and
+			(new_age > 0 and
+				new_age < 150
+			) and
+			(new_gender = "男" or
+				new_gender = "女"
+			)
+		postcondition:
+			acPassword = new_password and
+			t.Name = new_name and
+			t.Age = new_age and
+			t.Gender = new_gender and
+			result = true
+	}
+
+	Contract EditUserService::editApprove(new_ApproveID : String, new_type : String, new_password : String, accountID : String, adminID : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = adminID),
+			account_ed:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			t:Approve = Approve.allInstance()->any(c:Approve | c.AccountID = accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false and
+			ac.Type = "管理员" and
+			account_ed.oclIsUndefined() = false and
+			t.oclIsUndefined() = false and
+			new_ApproveID.size() < 20 and
+			(new_type = "教师" or
+				new_type = "管理员" or
+				new_type = "学生"
+			) and
+			new_password.size() < 20
+		postcondition:
+			account_ed.Type = new_type and
+			account_ed.Password = new_password and
+			t.ApproveID = new_ApproveID and
+			result = true
+	}
+
+	Contract EditUserService::editApplicant(new_ApplicantID : String, new_type : String, new_password : String, accountID : String, adminID : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = adminID),
+			account_ed:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			t:Applicant = Applicant.allInstance()->any(c:Applicant | c.AccountID = accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false and
+			ac.Type = "管理员" and
+			account_ed.oclIsUndefined() = false and
+			t.oclIsUndefined() = false and
+			new_ApplicantID.size() < 20 and
+			(new_type = "教师" or
+				new_type = "管理员" or
+				new_type = "学生"
+			) and
+			new_password.size() < 20
+		postcondition:
+			account_ed.Type = new_type and
+			account_ed.Password = new_password and
+			t.ApplicantID = new_ApplicantID and
+			result = true
+	}
+
+	Contract EditUserService::editSelf(new_name : String, new_age : Integer, new_gender : String, new_password : String, accountID : String, new_adminID : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			a:Admin = Admin.allInstance()->any(c:Admin | c.AccountID = accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false and
+			ac.Type = "管理员" and
+			a.oclIsUndefined() = false and
+			new_name.size() < 20 and
+			new_password.size() < 20 and
+			(new_age > 0 and
+				new_age < 150
+			) and
+			(new_gender = "男" or
+				new_gender = "女"
+			)
+		postcondition:
+			a.Name = new_name and
+			a.Age = new_age and
+			a.Gender = new_gender and
+			ac.Password = new_password and
+			a.AdminID = new_adminID and
+			result = true
+	}
+
+	Contract AddUserService::addApprove(name : String, age : Integer, gender : String, ApproveID : String, password : String, type : String) : Boolean {
+
+		definition:
+			Approve:Approve = Approve.allInstance()->any(Approve:Approve | Approve.ApproveID = ApproveID)
+
+		precondition:
+			name.size() < 10 and
+			age > 0 and
+			age < 150 and
+			(gender = "男" or
+				gender = "女"
+			) and
+			ApproveID.size() < 20 and
+			password.size() < 20 and
+			type = "教师" and
+			Approve.oclIsUndefined() = true
+		postcondition:
+			let a:Approve in
+			let b:Account in
+			a.oclIsNew() and
+			b.oclIsNew() and
+			a.Name = name and
+			a.Age = age and
+			a.Gender = gender and
+			a.ApproveID = ApproveID and
+			a.AccountID = ApproveID and
+			Approve.allInstance()->includes(a) and
+			b.AccountID = ApproveID and
+			b.Password = password and
+			b.Type = "教师" and
+			Account.allInstance()->includes(b) and
+			result = true
+
+	}
+
+	Contract AddUserService::addApplicant(name : String, age : Integer, gender : String, ApplicantID : String, password : String, type : String) : Boolean {
+
+		definition:
+			Applicant:Applicant = Applicant.allInstance()->any(Applicant:Applicant | Applicant.ApplicantID = ApplicantID)
+
+		precondition:
+			name.size() < 10 and
+			age > 0 and
+			age < 150 and
+			(gender = "男" or
+				gender = "女"
+			) and
+			ApplicantID.size() < 20 and
+			password.size() < 20 and
+			type = "学生" and
+			Applicant.oclIsUndefined() = true
+		postcondition:
+			let a:Applicant in
+			let b:Account in
+			a.oclIsNew() and
+			b.oclIsNew() and
+			a.Name = name and
+			a.Age = age and
+			a.Gender = gender and
+			a.ApplicantID = ApplicantID and
+			a.AccountID = ApplicantID and
+			Applicant.allInstance()->includes(a) and
+			b.AccountID = ApplicantID and
+			b.Password = password and
+			b.Type = "学生" and
+			Account.allInstance()->includes(b) and
+			result = true
+
+	}
+
+	Contract AddUserService::addAdmin(name : String, age : Integer, gender : String, adminID : String, password : String, type : String) : Boolean {
+
+		definition:
+			admin:Admin = Admin.allInstance()->any(admin:Admin | admin.AdminID = adminID)
+
+		precondition:
+			admin.oclIsUndefined() = true
+		postcondition:
+			let a:Admin in
+			let b:Account in
+			a.oclIsNew() and
+			b.oclIsNew() and
+			a.Name = name and
+			a.Age = age and
+			a.Gender = gender and
+			a.AdminID = adminID and
+			a.AccountID = adminID and
+			Admin.allInstance()->includes(a) and
+			b.AccountID = adminID and
+			b.Password = password and
+			b.Type = "管理员" and
+			Account.allInstance()->includes(b) and
+			result = true
+	}
+
+	Contract DeleteUserService::deleteByAdmin(accountID : String, adminPassword : String, ad_accountID : String) : Boolean {
+
+		definition:
+			ac:Account = Account.allInstance()->any(c:Account | c.AccountID = accountID),
+			ad:Account = Account.allInstance()->any(c:Account | c.AccountID = ad_accountID)
+
+		precondition:
+			ac.oclIsUndefined() = false and
+			ad.oclIsUndefined() = false and
+			ad.Type = "管理员" and
+			ad.Password = adminPassword and
+			Account.allInstance()->includes(ac)
+		postcondition:
+			Account.allInstance()->excludes(account_de) and
+			result = true
+	}
+
+}
+
+DomainModel OA { EntityContext ApplicantService { EntityApplicant extends People {
+		ApplicantID : String
+
+		[Refer]
+		ApplicanttoAccount : Account Association
+	} } EntityContext AdminService { EntityAdmin extends People {
+		AdminID : String
+
+		[Refer]
+		AdmintoAccount : Account Association
+	} } EntityContext ApproveService { Entity Approve extends People {
+		ApproveID : String
+
+		[Refer]
+		ApprovetoAccount : Account Association
+	} } EntityContext AccountService { Entity Account {
+		AccountID : String
+		Password : String
+		Type : String
+
+		[Refer]
+		AccounttoAdmin : Admin ! Association
+		AccounttoApprove : Approve ! Association
+		AccounttoApplicant : Applicant ! Association
+		AccounttoMessage : Message* Association
+		AccounttoApplication : Application* Association
+	} Entity People {
+		Age : Integer
+		Gender : String
+		Name : String
+		AccountID : String
+	} } EntityContext ClassroomService { Entity Classroom {
+		RoomID : String
+		State : String
+
+		[Refer]
+		ClassroomtoApplication : Application* ! Association
+	} Entity Application {
+		ApplicationID : String
+		RoomID : String
+		AccountID : String
+		UseTime : Date
+		State : String
+
+		[Refer]
+		ApplicationtoAccount : Account ! Association
+		ApplicationtoClassroom : Classroom Association
+	} } EntityContext MessageService { Entity Message {
+		MessageID : String
+		Content : String
+		Time : Date
+
+		[Refer]
+		MessagetoAccount : Account ! Association
+	} } }

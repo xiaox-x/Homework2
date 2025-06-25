@@ -1,0 +1,3910 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rEMODEL:RequirementModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rEMODEL="http://www.mydreamy.net/requirementmodel/REMODEL">
+  <UseCaseModel name="ClassroomMS">
+    <uc name="manageUser" UCRelation="include">
+      <relateduc href="classroomms.remodel#|0"/>
+      <relateduc href="classroomms.remodel#|1"/>
+      <relateduc href="classroomms.remodel#|2"/>
+    </uc>
+    <uc name="addUser">
+      <ssd href="classroomms.remodel#|3"/>
+      <service href="classroomms.remodel#|4"/>
+    </uc>
+    <uc name="deleteUser">
+      <ssd href="classroomms.remodel#|5"/>
+      <service href="classroomms.remodel#|6"/>
+    </uc>
+    <uc name="editUser">
+      <ssd href="classroomms.remodel#|7"/>
+      <service href="classroomms.remodel#|8"/>
+    </uc>
+    <uc name="processApplication">
+      <ssd href="classroomms.remodel#|9"/>
+      <service href="classroomms.remodel#|10"/>
+    </uc>
+    <uc name="viewUsage">
+      <ssd href="classroomms.remodel#|11"/>
+      <service href="classroomms.remodel#|12"/>
+    </uc>
+    <uc name="createApplication">
+      <ssd href="classroomms.remodel#|13"/>
+      <service href="classroomms.remodel#|14"/>
+    </uc>
+    <uc name="withdrawApplication">
+      <ssd href="classroomms.remodel#|15"/>
+      <service href="classroomms.remodel#|16"/>
+    </uc>
+    <uc name="login">
+      <ssd href="classroomms.remodel#|17"/>
+      <service href="classroomms.remodel#|18"/>
+    </uc>
+    <uc name="modifyInfo">
+      <ssd href="classroomms.remodel#|19"/>
+      <service href="classroomms.remodel#|20"/>
+    </uc>
+    <actor name="Student">
+      <uc href="classroomms.remodel#|21"/>
+      <uc href="classroomms.remodel#|22"/>
+      <uc href="classroomms.remodel#|23"/>
+      <uc href="classroomms.remodel#|24"/>
+      <uc href="classroomms.remodel#|25"/>
+    </actor>
+    <actor name="Admin">
+      <uc href="classroomms.remodel#|26"/>
+      <uc href="classroomms.remodel#|27"/>
+      <uc href="classroomms.remodel#|28"/>
+      <uc href="classroomms.remodel#|29"/>
+      <uc href="classroomms.remodel#|30"/>
+      <uc href="classroomms.remodel#|31"/>
+      <uc href="classroomms.remodel#|32"/>
+    </actor>
+    <actor name="Teacher">
+      <uc href="classroomms.remodel#|33"/>
+      <uc href="classroomms.remodel#|34"/>
+      <uc href="classroomms.remodel#|35"/>
+      <uc href="classroomms.remodel#|36"/>
+      <uc href="classroomms.remodel#|37"/>
+    </actor>
+    <interaction name="ProcessApplicationSSD">
+      <participants href="classroomms.remodel#|38"/>
+      <participants href="classroomms.remodel#|39"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="ProcessApplicationSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|41"/>
+        <receivingEnd href="classroomms.remodel#|42"/>
+        <op href="classroomms.remodel#|40"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="ProcessApplicationSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|43"/>
+        <receivingEnd href="classroomms.remodel#|44"/>
+        <invocationMessage href="classroomms.remodel#|45"/>
+      </messages>
+      <executions name="ProcessApplicationSSDExecution1">
+        <owner href="classroomms.remodel#|46"/>
+        <start href="classroomms.remodel#|47"/>
+        <end href="classroomms.remodel#|48"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ProcessApplicationSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|49"/>
+        <message href="classroomms.remodel#|50"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ProcessApplicationSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|51"/>
+        <execution href="classroomms.remodel#|52"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ProcessApplicationSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|53"/>
+        <execution href="classroomms.remodel#|54"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ProcessApplicationSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|55"/>
+        <message href="classroomms.remodel#|56"/>
+      </ends>
+    </interaction>
+    <interaction name="LoginSSD">
+      <participants href="classroomms.remodel#|57"/>
+      <participants href="classroomms.remodel#|58"/>
+      <participants href="classroomms.remodel#|59"/>
+      <participants href="classroomms.remodel#|60"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="LoginSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|62"/>
+        <receivingEnd href="classroomms.remodel#|63"/>
+        <op href="classroomms.remodel#|61"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="LoginSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|64"/>
+        <receivingEnd href="classroomms.remodel#|65"/>
+        <invocationMessage href="classroomms.remodel#|66"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="LoginSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|68"/>
+        <receivingEnd href="classroomms.remodel#|69"/>
+        <op href="classroomms.remodel#|67"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="LoginSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|70"/>
+        <receivingEnd href="classroomms.remodel#|71"/>
+        <invocationMessage href="classroomms.remodel#|72"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="LoginSSDCallMessage5">
+        <sendingEnd href="classroomms.remodel#|74"/>
+        <receivingEnd href="classroomms.remodel#|75"/>
+        <op href="classroomms.remodel#|73"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="LoginSSDCallMessage5Return">
+        <sendingEnd href="classroomms.remodel#|76"/>
+        <receivingEnd href="classroomms.remodel#|77"/>
+        <invocationMessage href="classroomms.remodel#|78"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="LoginSSDCallMessage7">
+        <sendingEnd href="classroomms.remodel#|80"/>
+        <receivingEnd href="classroomms.remodel#|81"/>
+        <op href="classroomms.remodel#|79"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="LoginSSDCallMessage7Return">
+        <sendingEnd href="classroomms.remodel#|82"/>
+        <receivingEnd href="classroomms.remodel#|83"/>
+        <invocationMessage href="classroomms.remodel#|84"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="LoginSSDCallMessage9">
+        <sendingEnd href="classroomms.remodel#|86"/>
+        <receivingEnd href="classroomms.remodel#|87"/>
+        <op href="classroomms.remodel#|85"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="LoginSSDCallMessage9Return">
+        <sendingEnd href="classroomms.remodel#|88"/>
+        <receivingEnd href="classroomms.remodel#|89"/>
+        <invocationMessage href="classroomms.remodel#|90"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="LoginSSDCallMessage11">
+        <sendingEnd href="classroomms.remodel#|92"/>
+        <receivingEnd href="classroomms.remodel#|93"/>
+        <op href="classroomms.remodel#|91"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="LoginSSDCallMessage11Return">
+        <sendingEnd href="classroomms.remodel#|94"/>
+        <receivingEnd href="classroomms.remodel#|95"/>
+        <invocationMessage href="classroomms.remodel#|96"/>
+      </messages>
+      <executions name="LoginSSDExecution1">
+        <owner href="classroomms.remodel#|97"/>
+        <start href="classroomms.remodel#|98"/>
+        <end href="classroomms.remodel#|99"/>
+      </executions>
+      <executions name="LoginSSDExecution2">
+        <owner href="classroomms.remodel#|100"/>
+        <start href="classroomms.remodel#|101"/>
+        <end href="classroomms.remodel#|102"/>
+      </executions>
+      <executions name="LoginSSDExecution3">
+        <owner href="classroomms.remodel#|103"/>
+        <start href="classroomms.remodel#|104"/>
+        <end href="classroomms.remodel#|105"/>
+      </executions>
+      <executions name="LoginSSDExecution4">
+        <owner href="classroomms.remodel#|106"/>
+        <start href="classroomms.remodel#|107"/>
+        <end href="classroomms.remodel#|108"/>
+      </executions>
+      <executions name="LoginSSDExecution5">
+        <owner href="classroomms.remodel#|109"/>
+        <start href="classroomms.remodel#|110"/>
+        <end href="classroomms.remodel#|111"/>
+      </executions>
+      <executions name="LoginSSDExecution6">
+        <owner href="classroomms.remodel#|112"/>
+        <start href="classroomms.remodel#|113"/>
+        <end href="classroomms.remodel#|114"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|115"/>
+        <message href="classroomms.remodel#|116"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|117"/>
+        <execution href="classroomms.remodel#|118"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|119"/>
+        <execution href="classroomms.remodel#|120"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|121"/>
+        <message href="classroomms.remodel#|122"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|123"/>
+        <message href="classroomms.remodel#|124"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|125"/>
+        <execution href="classroomms.remodel#|126"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|127"/>
+        <execution href="classroomms.remodel#|128"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|129"/>
+        <message href="classroomms.remodel#|130"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage5SendingEnd">
+        <context href="classroomms.remodel#|131"/>
+        <message href="classroomms.remodel#|132"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution3StartEnd">
+        <context href="classroomms.remodel#|133"/>
+        <execution href="classroomms.remodel#|134"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution3FinishEnd">
+        <context href="classroomms.remodel#|135"/>
+        <execution href="classroomms.remodel#|136"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage5ReturnReceivingEnd">
+        <context href="classroomms.remodel#|137"/>
+        <message href="classroomms.remodel#|138"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage7SendingEnd">
+        <context href="classroomms.remodel#|139"/>
+        <message href="classroomms.remodel#|140"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution4StartEnd">
+        <context href="classroomms.remodel#|141"/>
+        <execution href="classroomms.remodel#|142"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution4FinishEnd">
+        <context href="classroomms.remodel#|143"/>
+        <execution href="classroomms.remodel#|144"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage7ReturnReceivingEnd">
+        <context href="classroomms.remodel#|145"/>
+        <message href="classroomms.remodel#|146"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage9SendingEnd">
+        <context href="classroomms.remodel#|147"/>
+        <message href="classroomms.remodel#|148"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution5StartEnd">
+        <context href="classroomms.remodel#|149"/>
+        <execution href="classroomms.remodel#|150"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution5FinishEnd">
+        <context href="classroomms.remodel#|151"/>
+        <execution href="classroomms.remodel#|152"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage9ReturnReceivingEnd">
+        <context href="classroomms.remodel#|153"/>
+        <message href="classroomms.remodel#|154"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage11SendingEnd">
+        <context href="classroomms.remodel#|155"/>
+        <message href="classroomms.remodel#|156"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution6StartEnd">
+        <context href="classroomms.remodel#|157"/>
+        <execution href="classroomms.remodel#|158"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="LoginSSDExecution6FinishEnd">
+        <context href="classroomms.remodel#|159"/>
+        <execution href="classroomms.remodel#|160"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="LoginSSDCallMessage11ReturnReceivingEnd">
+        <context href="classroomms.remodel#|161"/>
+        <message href="classroomms.remodel#|162"/>
+      </ends>
+    </interaction>
+    <interaction name="ViewUsageSSD">
+      <participants href="classroomms.remodel#|163"/>
+      <participants href="classroomms.remodel#|164"/>
+      <participants href="classroomms.remodel#|165"/>
+      <participants href="classroomms.remodel#|166"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="ViewUsageSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|168"/>
+        <receivingEnd href="classroomms.remodel#|169"/>
+        <op href="classroomms.remodel#|167"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="ViewUsageSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|170"/>
+        <receivingEnd href="classroomms.remodel#|171"/>
+        <invocationMessage href="classroomms.remodel#|172"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="ViewUsageSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|174"/>
+        <receivingEnd href="classroomms.remodel#|175"/>
+        <op href="classroomms.remodel#|173"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="ViewUsageSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|176"/>
+        <receivingEnd href="classroomms.remodel#|177"/>
+        <invocationMessage href="classroomms.remodel#|178"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="ViewUsageSSDCallMessage5">
+        <sendingEnd href="classroomms.remodel#|180"/>
+        <receivingEnd href="classroomms.remodel#|181"/>
+        <op href="classroomms.remodel#|179"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="ViewUsageSSDCallMessage5Return">
+        <sendingEnd href="classroomms.remodel#|182"/>
+        <receivingEnd href="classroomms.remodel#|183"/>
+        <invocationMessage href="classroomms.remodel#|184"/>
+      </messages>
+      <executions name="ViewUsageSSDExecution1">
+        <owner href="classroomms.remodel#|185"/>
+        <start href="classroomms.remodel#|186"/>
+        <end href="classroomms.remodel#|187"/>
+      </executions>
+      <executions name="ViewUsageSSDExecution2">
+        <owner href="classroomms.remodel#|188"/>
+        <start href="classroomms.remodel#|189"/>
+        <end href="classroomms.remodel#|190"/>
+      </executions>
+      <executions name="ViewUsageSSDExecution3">
+        <owner href="classroomms.remodel#|191"/>
+        <start href="classroomms.remodel#|192"/>
+        <end href="classroomms.remodel#|193"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ViewUsageSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|194"/>
+        <message href="classroomms.remodel#|195"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ViewUsageSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|196"/>
+        <execution href="classroomms.remodel#|197"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ViewUsageSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|198"/>
+        <execution href="classroomms.remodel#|199"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ViewUsageSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|200"/>
+        <message href="classroomms.remodel#|201"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ViewUsageSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|202"/>
+        <message href="classroomms.remodel#|203"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ViewUsageSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|204"/>
+        <execution href="classroomms.remodel#|205"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ViewUsageSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|206"/>
+        <execution href="classroomms.remodel#|207"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ViewUsageSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|208"/>
+        <message href="classroomms.remodel#|209"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ViewUsageSSDCallMessage5SendingEnd">
+        <context href="classroomms.remodel#|210"/>
+        <message href="classroomms.remodel#|211"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ViewUsageSSDExecution3StartEnd">
+        <context href="classroomms.remodel#|212"/>
+        <execution href="classroomms.remodel#|213"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ViewUsageSSDExecution3FinishEnd">
+        <context href="classroomms.remodel#|214"/>
+        <execution href="classroomms.remodel#|215"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ViewUsageSSDCallMessage5ReturnReceivingEnd">
+        <context href="classroomms.remodel#|216"/>
+        <message href="classroomms.remodel#|217"/>
+      </ends>
+    </interaction>
+    <interaction name="CreateApplicationSSD">
+      <participants href="classroomms.remodel#|218"/>
+      <participants href="classroomms.remodel#|219"/>
+      <participants href="classroomms.remodel#|220"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="CreateApplicationSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|222"/>
+        <receivingEnd href="classroomms.remodel#|223"/>
+        <op href="classroomms.remodel#|221"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="CreateApplicationSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|224"/>
+        <receivingEnd href="classroomms.remodel#|225"/>
+        <invocationMessage href="classroomms.remodel#|226"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="CreateApplicationSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|228"/>
+        <receivingEnd href="classroomms.remodel#|229"/>
+        <op href="classroomms.remodel#|227"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="CreateApplicationSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|230"/>
+        <receivingEnd href="classroomms.remodel#|231"/>
+        <invocationMessage href="classroomms.remodel#|232"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="CreateApplicationSSDCallMessage5">
+        <sendingEnd href="classroomms.remodel#|234"/>
+        <receivingEnd href="classroomms.remodel#|235"/>
+        <op href="classroomms.remodel#|233"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="CreateApplicationSSDCallMessage5Return">
+        <sendingEnd href="classroomms.remodel#|236"/>
+        <receivingEnd href="classroomms.remodel#|237"/>
+        <invocationMessage href="classroomms.remodel#|238"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="CreateApplicationSSDCallMessage7">
+        <sendingEnd href="classroomms.remodel#|240"/>
+        <receivingEnd href="classroomms.remodel#|241"/>
+        <op href="classroomms.remodel#|239"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="CreateApplicationSSDCallMessage7Return">
+        <sendingEnd href="classroomms.remodel#|242"/>
+        <receivingEnd href="classroomms.remodel#|243"/>
+        <invocationMessage href="classroomms.remodel#|244"/>
+      </messages>
+      <executions name="CreateApplicationSSDExecution1">
+        <owner href="classroomms.remodel#|245"/>
+        <start href="classroomms.remodel#|246"/>
+        <end href="classroomms.remodel#|247"/>
+      </executions>
+      <executions name="CreateApplicationSSDExecution2">
+        <owner href="classroomms.remodel#|248"/>
+        <start href="classroomms.remodel#|249"/>
+        <end href="classroomms.remodel#|250"/>
+      </executions>
+      <executions name="CreateApplicationSSDExecution3">
+        <owner href="classroomms.remodel#|251"/>
+        <start href="classroomms.remodel#|252"/>
+        <end href="classroomms.remodel#|253"/>
+      </executions>
+      <executions name="CreateApplicationSSDExecution4">
+        <owner href="classroomms.remodel#|254"/>
+        <start href="classroomms.remodel#|255"/>
+        <end href="classroomms.remodel#|256"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|257"/>
+        <message href="classroomms.remodel#|258"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|259"/>
+        <execution href="classroomms.remodel#|260"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|261"/>
+        <execution href="classroomms.remodel#|262"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|263"/>
+        <message href="classroomms.remodel#|264"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|265"/>
+        <message href="classroomms.remodel#|266"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|267"/>
+        <execution href="classroomms.remodel#|268"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|269"/>
+        <execution href="classroomms.remodel#|270"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|271"/>
+        <message href="classroomms.remodel#|272"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage5SendingEnd">
+        <context href="classroomms.remodel#|273"/>
+        <message href="classroomms.remodel#|274"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution3StartEnd">
+        <context href="classroomms.remodel#|275"/>
+        <execution href="classroomms.remodel#|276"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution3FinishEnd">
+        <context href="classroomms.remodel#|277"/>
+        <execution href="classroomms.remodel#|278"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage5ReturnReceivingEnd">
+        <context href="classroomms.remodel#|279"/>
+        <message href="classroomms.remodel#|280"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage7SendingEnd">
+        <context href="classroomms.remodel#|281"/>
+        <message href="classroomms.remodel#|282"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution4StartEnd">
+        <context href="classroomms.remodel#|283"/>
+        <execution href="classroomms.remodel#|284"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="CreateApplicationSSDExecution4FinishEnd">
+        <context href="classroomms.remodel#|285"/>
+        <execution href="classroomms.remodel#|286"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="CreateApplicationSSDCallMessage7ReturnReceivingEnd">
+        <context href="classroomms.remodel#|287"/>
+        <message href="classroomms.remodel#|288"/>
+      </ends>
+    </interaction>
+    <interaction name="WithdrawApplicationSSD">
+      <participants href="classroomms.remodel#|289"/>
+      <participants href="classroomms.remodel#|290"/>
+      <participants href="classroomms.remodel#|291"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="WithdrawApplicationSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|293"/>
+        <receivingEnd href="classroomms.remodel#|294"/>
+        <op href="classroomms.remodel#|292"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="WithdrawApplicationSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|295"/>
+        <receivingEnd href="classroomms.remodel#|296"/>
+        <invocationMessage href="classroomms.remodel#|297"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="WithdrawApplicationSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|299"/>
+        <receivingEnd href="classroomms.remodel#|300"/>
+        <op href="classroomms.remodel#|298"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="WithdrawApplicationSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|301"/>
+        <receivingEnd href="classroomms.remodel#|302"/>
+        <invocationMessage href="classroomms.remodel#|303"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="WithdrawApplicationSSDCallMessage5">
+        <sendingEnd href="classroomms.remodel#|305"/>
+        <receivingEnd href="classroomms.remodel#|306"/>
+        <op href="classroomms.remodel#|304"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="WithdrawApplicationSSDCallMessage5Return">
+        <sendingEnd href="classroomms.remodel#|307"/>
+        <receivingEnd href="classroomms.remodel#|308"/>
+        <invocationMessage href="classroomms.remodel#|309"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="WithdrawApplicationSSDCallMessage7">
+        <sendingEnd href="classroomms.remodel#|311"/>
+        <receivingEnd href="classroomms.remodel#|312"/>
+        <op href="classroomms.remodel#|310"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="WithdrawApplicationSSDCallMessage7Return">
+        <sendingEnd href="classroomms.remodel#|313"/>
+        <receivingEnd href="classroomms.remodel#|314"/>
+        <invocationMessage href="classroomms.remodel#|315"/>
+      </messages>
+      <executions name="WithdrawApplicationSSDExecution1">
+        <owner href="classroomms.remodel#|316"/>
+        <start href="classroomms.remodel#|317"/>
+        <end href="classroomms.remodel#|318"/>
+      </executions>
+      <executions name="WithdrawApplicationSSDExecution2">
+        <owner href="classroomms.remodel#|319"/>
+        <start href="classroomms.remodel#|320"/>
+        <end href="classroomms.remodel#|321"/>
+      </executions>
+      <executions name="WithdrawApplicationSSDExecution3">
+        <owner href="classroomms.remodel#|322"/>
+        <start href="classroomms.remodel#|323"/>
+        <end href="classroomms.remodel#|324"/>
+      </executions>
+      <executions name="WithdrawApplicationSSDExecution4">
+        <owner href="classroomms.remodel#|325"/>
+        <start href="classroomms.remodel#|326"/>
+        <end href="classroomms.remodel#|327"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|328"/>
+        <message href="classroomms.remodel#|329"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|330"/>
+        <execution href="classroomms.remodel#|331"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|332"/>
+        <execution href="classroomms.remodel#|333"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|334"/>
+        <message href="classroomms.remodel#|335"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|336"/>
+        <message href="classroomms.remodel#|337"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|338"/>
+        <execution href="classroomms.remodel#|339"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|340"/>
+        <execution href="classroomms.remodel#|341"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|342"/>
+        <message href="classroomms.remodel#|343"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage5SendingEnd">
+        <context href="classroomms.remodel#|344"/>
+        <message href="classroomms.remodel#|345"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution3StartEnd">
+        <context href="classroomms.remodel#|346"/>
+        <execution href="classroomms.remodel#|347"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution3FinishEnd">
+        <context href="classroomms.remodel#|348"/>
+        <execution href="classroomms.remodel#|349"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage5ReturnReceivingEnd">
+        <context href="classroomms.remodel#|350"/>
+        <message href="classroomms.remodel#|351"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage7SendingEnd">
+        <context href="classroomms.remodel#|352"/>
+        <message href="classroomms.remodel#|353"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution4StartEnd">
+        <context href="classroomms.remodel#|354"/>
+        <execution href="classroomms.remodel#|355"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="WithdrawApplicationSSDExecution4FinishEnd">
+        <context href="classroomms.remodel#|356"/>
+        <execution href="classroomms.remodel#|357"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="WithdrawApplicationSSDCallMessage7ReturnReceivingEnd">
+        <context href="classroomms.remodel#|358"/>
+        <message href="classroomms.remodel#|359"/>
+      </ends>
+    </interaction>
+    <interaction name="ModifyInfoSSD">
+      <participants href="classroomms.remodel#|360"/>
+      <participants href="classroomms.remodel#|361"/>
+      <participants href="classroomms.remodel#|362"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="ModifyInfoSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|364"/>
+        <receivingEnd href="classroomms.remodel#|365"/>
+        <op href="classroomms.remodel#|363"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="ModifyInfoSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|366"/>
+        <receivingEnd href="classroomms.remodel#|367"/>
+        <invocationMessage href="classroomms.remodel#|368"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="ModifyInfoSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|370"/>
+        <receivingEnd href="classroomms.remodel#|371"/>
+        <op href="classroomms.remodel#|369"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="ModifyInfoSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|372"/>
+        <receivingEnd href="classroomms.remodel#|373"/>
+        <invocationMessage href="classroomms.remodel#|374"/>
+      </messages>
+      <executions name="ModifyInfoSSDExecution1">
+        <owner href="classroomms.remodel#|375"/>
+        <start href="classroomms.remodel#|376"/>
+        <end href="classroomms.remodel#|377"/>
+      </executions>
+      <executions name="ModifyInfoSSDExecution2">
+        <owner href="classroomms.remodel#|378"/>
+        <start href="classroomms.remodel#|379"/>
+        <end href="classroomms.remodel#|380"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ModifyInfoSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|381"/>
+        <message href="classroomms.remodel#|382"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ModifyInfoSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|383"/>
+        <execution href="classroomms.remodel#|384"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ModifyInfoSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|385"/>
+        <execution href="classroomms.remodel#|386"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ModifyInfoSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|387"/>
+        <message href="classroomms.remodel#|388"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ModifyInfoSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|389"/>
+        <message href="classroomms.remodel#|390"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ModifyInfoSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|391"/>
+        <execution href="classroomms.remodel#|392"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="ModifyInfoSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|393"/>
+        <execution href="classroomms.remodel#|394"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="ModifyInfoSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|395"/>
+        <message href="classroomms.remodel#|396"/>
+      </ends>
+    </interaction>
+    <interaction name="EditUserSSD">
+      <participants href="classroomms.remodel#|397"/>
+      <participants href="classroomms.remodel#|398"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="EditUserSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|400"/>
+        <receivingEnd href="classroomms.remodel#|401"/>
+        <op href="classroomms.remodel#|399"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="EditUserSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|402"/>
+        <receivingEnd href="classroomms.remodel#|403"/>
+        <invocationMessage href="classroomms.remodel#|404"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="EditUserSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|406"/>
+        <receivingEnd href="classroomms.remodel#|407"/>
+        <op href="classroomms.remodel#|405"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="EditUserSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|408"/>
+        <receivingEnd href="classroomms.remodel#|409"/>
+        <invocationMessage href="classroomms.remodel#|410"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="EditUserSSDCallMessage5">
+        <sendingEnd href="classroomms.remodel#|412"/>
+        <receivingEnd href="classroomms.remodel#|413"/>
+        <op href="classroomms.remodel#|411"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="EditUserSSDCallMessage5Return">
+        <sendingEnd href="classroomms.remodel#|414"/>
+        <receivingEnd href="classroomms.remodel#|415"/>
+        <invocationMessage href="classroomms.remodel#|416"/>
+      </messages>
+      <executions name="EditUserSSDExecution1">
+        <owner href="classroomms.remodel#|417"/>
+        <start href="classroomms.remodel#|418"/>
+        <end href="classroomms.remodel#|419"/>
+      </executions>
+      <executions name="EditUserSSDExecution2">
+        <owner href="classroomms.remodel#|420"/>
+        <start href="classroomms.remodel#|421"/>
+        <end href="classroomms.remodel#|422"/>
+      </executions>
+      <executions name="EditUserSSDExecution3">
+        <owner href="classroomms.remodel#|423"/>
+        <start href="classroomms.remodel#|424"/>
+        <end href="classroomms.remodel#|425"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="EditUserSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|426"/>
+        <message href="classroomms.remodel#|427"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="EditUserSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|428"/>
+        <execution href="classroomms.remodel#|429"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="EditUserSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|430"/>
+        <execution href="classroomms.remodel#|431"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="EditUserSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|432"/>
+        <message href="classroomms.remodel#|433"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="EditUserSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|434"/>
+        <message href="classroomms.remodel#|435"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="EditUserSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|436"/>
+        <execution href="classroomms.remodel#|437"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="EditUserSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|438"/>
+        <execution href="classroomms.remodel#|439"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="EditUserSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|440"/>
+        <message href="classroomms.remodel#|441"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="EditUserSSDCallMessage5SendingEnd">
+        <context href="classroomms.remodel#|442"/>
+        <message href="classroomms.remodel#|443"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="EditUserSSDExecution3StartEnd">
+        <context href="classroomms.remodel#|444"/>
+        <execution href="classroomms.remodel#|445"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="EditUserSSDExecution3FinishEnd">
+        <context href="classroomms.remodel#|446"/>
+        <execution href="classroomms.remodel#|447"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="EditUserSSDCallMessage5ReturnReceivingEnd">
+        <context href="classroomms.remodel#|448"/>
+        <message href="classroomms.remodel#|449"/>
+      </ends>
+    </interaction>
+    <interaction name="AddUserSSD">
+      <participants href="classroomms.remodel#|450"/>
+      <participants href="classroomms.remodel#|451"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="AddUserSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|453"/>
+        <receivingEnd href="classroomms.remodel#|454"/>
+        <op href="classroomms.remodel#|452"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="AddUserSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|455"/>
+        <receivingEnd href="classroomms.remodel#|456"/>
+        <invocationMessage href="classroomms.remodel#|457"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="AddUserSSDCallMessage3">
+        <sendingEnd href="classroomms.remodel#|459"/>
+        <receivingEnd href="classroomms.remodel#|460"/>
+        <op href="classroomms.remodel#|458"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="AddUserSSDCallMessage3Return">
+        <sendingEnd href="classroomms.remodel#|461"/>
+        <receivingEnd href="classroomms.remodel#|462"/>
+        <invocationMessage href="classroomms.remodel#|463"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="AddUserSSDCallMessage5">
+        <sendingEnd href="classroomms.remodel#|465"/>
+        <receivingEnd href="classroomms.remodel#|466"/>
+        <op href="classroomms.remodel#|464"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="AddUserSSDCallMessage5Return">
+        <sendingEnd href="classroomms.remodel#|467"/>
+        <receivingEnd href="classroomms.remodel#|468"/>
+        <invocationMessage href="classroomms.remodel#|469"/>
+      </messages>
+      <executions name="AddUserSSDExecution1">
+        <owner href="classroomms.remodel#|470"/>
+        <start href="classroomms.remodel#|471"/>
+        <end href="classroomms.remodel#|472"/>
+      </executions>
+      <executions name="AddUserSSDExecution2">
+        <owner href="classroomms.remodel#|473"/>
+        <start href="classroomms.remodel#|474"/>
+        <end href="classroomms.remodel#|475"/>
+      </executions>
+      <executions name="AddUserSSDExecution3">
+        <owner href="classroomms.remodel#|476"/>
+        <start href="classroomms.remodel#|477"/>
+        <end href="classroomms.remodel#|478"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="AddUserSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|479"/>
+        <message href="classroomms.remodel#|480"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="AddUserSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|481"/>
+        <execution href="classroomms.remodel#|482"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="AddUserSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|483"/>
+        <execution href="classroomms.remodel#|484"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="AddUserSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|485"/>
+        <message href="classroomms.remodel#|486"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="AddUserSSDCallMessage3SendingEnd">
+        <context href="classroomms.remodel#|487"/>
+        <message href="classroomms.remodel#|488"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="AddUserSSDExecution2StartEnd">
+        <context href="classroomms.remodel#|489"/>
+        <execution href="classroomms.remodel#|490"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="AddUserSSDExecution2FinishEnd">
+        <context href="classroomms.remodel#|491"/>
+        <execution href="classroomms.remodel#|492"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="AddUserSSDCallMessage3ReturnReceivingEnd">
+        <context href="classroomms.remodel#|493"/>
+        <message href="classroomms.remodel#|494"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="AddUserSSDCallMessage5SendingEnd">
+        <context href="classroomms.remodel#|495"/>
+        <message href="classroomms.remodel#|496"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="AddUserSSDExecution3StartEnd">
+        <context href="classroomms.remodel#|497"/>
+        <execution href="classroomms.remodel#|498"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="AddUserSSDExecution3FinishEnd">
+        <context href="classroomms.remodel#|499"/>
+        <execution href="classroomms.remodel#|500"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="AddUserSSDCallMessage5ReturnReceivingEnd">
+        <context href="classroomms.remodel#|501"/>
+        <message href="classroomms.remodel#|502"/>
+      </ends>
+    </interaction>
+    <interaction name="DeleteUserSSD">
+      <participants href="classroomms.remodel#|503"/>
+      <participants href="classroomms.remodel#|504"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="DeleteUserSSDCallMessage1">
+        <sendingEnd href="classroomms.remodel#|506"/>
+        <receivingEnd href="classroomms.remodel#|507"/>
+        <op href="classroomms.remodel#|505"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="DeleteUserSSDCallMessage1Return">
+        <sendingEnd href="classroomms.remodel#|508"/>
+        <receivingEnd href="classroomms.remodel#|509"/>
+        <invocationMessage href="classroomms.remodel#|510"/>
+      </messages>
+      <executions name="DeleteUserSSDExecution1">
+        <owner href="classroomms.remodel#|511"/>
+        <start href="classroomms.remodel#|512"/>
+        <end href="classroomms.remodel#|513"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="DeleteUserSSDCallMessage1SendingEnd">
+        <context href="classroomms.remodel#|514"/>
+        <message href="classroomms.remodel#|515"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="DeleteUserSSDExecution1StartEnd">
+        <context href="classroomms.remodel#|516"/>
+        <execution href="classroomms.remodel#|517"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="DeleteUserSSDExecution1FinishEnd">
+        <context href="classroomms.remodel#|518"/>
+        <execution href="classroomms.remodel#|519"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="DeleteUserSSDCallMessage1ReturnReceivingEnd">
+        <context href="classroomms.remodel#|520"/>
+        <message href="classroomms.remodel#|521"/>
+      </ends>
+    </interaction>
+    <service name="ClassroomMSSystem">
+      <operation name="manageUser"/>
+      <operation name="addUser"/>
+      <operation name="deleteUser"/>
+      <operation name="editUser"/>
+      <operation name="processApplication"/>
+      <operation name="createApplication"/>
+      <operation name="viewUsage"/>
+      <operation name="withdrawApplication"/>
+      <operation name="login"/>
+      <operation name="modifyInfo"/>
+    </service>
+    <service name="ThirdPartyServices"/>
+    <service name="ProcessApplicationService">
+      <operation name="processByAdmin">
+        <parameter name="applicationID"/>
+        <parameter name="accountID"/>
+        <parameter name="password"/>
+      </operation>
+    </service>
+    <service name="LoginService">
+      <operation name="inputInfo">
+        <parameter name="accountID"/>
+        <parameter name="password"/>
+      </operation>
+      <operation name="loginSystem"/>
+      <operation name="inputByAdmin">
+        <parameter name="accountID"/>
+        <parameter name="password"/>
+      </operation>
+      <operation name="loginByAdmin"/>
+      <operation name="inputByStudent">
+        <parameter name="accountID"/>
+        <parameter name="password"/>
+      </operation>
+      <operation name="loginByStudent"/>
+    </service>
+    <service name="ViewUsageService">
+      <operation name="viewByTeacher"/>
+      <operation name="viewByAdmin"/>
+      <operation name="viewByStudent"/>
+    </service>
+    <service name="CreateApplicationService">
+      <operation name="inputByTeacher">
+        <parameter name="roomID"/>
+        <parameter name="time"/>
+      </operation>
+      <operation name="createByTeacher">
+        <parameter name="roomID"/>
+        <parameter name="time"/>
+        <parameter name="accountID"/>
+      </operation>
+      <operation name="inputBy"/>
+      <operation name="inputCreateStudent">
+        <parameter name="roomID"/>
+        <parameter name="time"/>
+      </operation>
+      <operation name="createByStudent">
+        <parameter name="roomID"/>
+        <parameter name="time"/>
+        <parameter name="accountID"/>
+      </operation>
+    </service>
+    <service name="WithdrawApplicationService">
+      <operation name="inputWithdrawInfoT">
+        <parameter name="applicationID"/>
+      </operation>
+      <operation name="withdrawByTeacher"/>
+      <operation name="inputWithdrawInfoS">
+        <parameter name="applicationID"/>
+      </operation>
+      <operation name="withdrawByStudent"/>
+    </service>
+    <service name="ModifyInfoService">
+      <operation name="modifyByTeacher">
+        <parameter name="new_name"/>
+        <parameter name="new_password"/>
+        <parameter name="new_age"/>
+        <parameter name="new_gender"/>
+        <parameter name="accountID"/>
+      </operation>
+      <operation name="modifyByStudent">
+        <parameter name="new_name"/>
+        <parameter name="new_password"/>
+        <parameter name="new_age"/>
+        <parameter name="new_gender"/>
+        <parameter name="accountID"/>
+      </operation>
+    </service>
+    <service name="EditUserService">
+      <operation name="editTeacher">
+        <parameter name="new_teacherID"/>
+        <parameter name="new_type"/>
+        <parameter name="new_password"/>
+        <parameter name="accountID"/>
+        <parameter name="adminID"/>
+      </operation>
+      <operation name="editStudent">
+        <parameter name="new_studentID"/>
+        <parameter name="new_type"/>
+        <parameter name="new_password"/>
+        <parameter name="accountID"/>
+        <parameter name="adminID"/>
+      </operation>
+      <operation name="editSelf">
+        <parameter name="new_name"/>
+        <parameter name="new_age"/>
+        <parameter name="new_gender"/>
+        <parameter name="new_password"/>
+        <parameter name="accountID"/>
+        <parameter name="new_adminID"/>
+      </operation>
+    </service>
+    <service name="AddUserService">
+      <operation name="addTeacher">
+        <parameter name="name"/>
+        <parameter name="age"/>
+        <parameter name="gender"/>
+        <parameter name="teacherID"/>
+        <parameter name="password"/>
+        <parameter name="type"/>
+      </operation>
+      <operation name="addStudent">
+        <parameter name="name"/>
+        <parameter name="age"/>
+        <parameter name="gender"/>
+        <parameter name="studentID"/>
+        <parameter name="password"/>
+        <parameter name="type"/>
+      </operation>
+      <operation name="addAdmin">
+        <parameter name="name"/>
+        <parameter name="age"/>
+        <parameter name="gender"/>
+        <parameter name="adminID"/>
+        <parameter name="password"/>
+        <parameter name="type"/>
+      </operation>
+    </service>
+    <service name="DeleteUserService">
+      <operation name="deleteByAdmin">
+        <parameter name="accountID"/>
+        <parameter name="adminPassword"/>
+        <parameter name="ad_accountID"/>
+      </operation>
+    </service>
+    <contract>
+      <service href="classroomms.remodel#|522"/>
+      <op name="manageUser">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|523"/>
+      <op name="addUser">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|524"/>
+      <op name="deleteUser">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|525"/>
+      <op name="editUser">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|526"/>
+      <op name="processApplication">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|527"/>
+      <op name="createApplication">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|528"/>
+      <op name="viewUsage">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|529"/>
+      <op name="withdrawApplication">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|530"/>
+      <op name="login">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|531"/>
+      <op name="processByAdmin">
+        <parameter name="applicationID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|532"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|533"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="ap">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|534"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Application" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|535"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="ApplicationID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="applicationID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ap"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="State">
+              <name symbol="ap"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5df2;&#x5904;&#x7406;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|536"/>
+      <op name="inputInfo">
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|537"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|538"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:IfExpCS">
+          <condition xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                <name symbol="ac"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+            </atomicexp>
+          </condition>
+          <thenExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+            </atomicexp>
+          </thenExpression>
+          <elseExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+            </atomicexp>
+          </elseExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|539"/>
+      <op name="loginSystem">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|540"/>
+      <op name="inputByAdmin">
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|541"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|542"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:IfExpCS">
+          <condition xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                <name symbol="ac"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+            </atomicexp>
+          </condition>
+          <thenExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+            </atomicexp>
+          </thenExpression>
+          <elseExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+            </atomicexp>
+          </elseExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|543"/>
+      <op name="loginByAdmin">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|544"/>
+      <op name="inputByStudent">
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|545"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|546"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:IfExpCS">
+          <condition xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                <name symbol="ac"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+            </atomicexp>
+          </condition>
+          <thenExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+            </atomicexp>
+          </thenExpression>
+          <elseExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+            </atomicexp>
+          </elseExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|547"/>
+      <op name="loginByStudent">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|548"/>
+      <op name="viewByTeacher">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|549"/>
+      <op name="viewByAdmin">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|550"/>
+      <op name="viewByStudent">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|551"/>
+      <op name="inputBy">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|552"/>
+      <op name="createByTeacher">
+        <parameter name="roomID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="time">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="time"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="100"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LetExpCS">
+          <variable name="a">
+            <type xsi:type="rEMODEL:EntityType">
+              <entity href="classroomms.remodel#|553"/>
+            </type>
+          </variable>
+          <inExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                <object symbol="a"/>
+                <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+              </leftside>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="ApplicationID">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="roomID"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="RoomID">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="roomID"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccounID">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="UseTime">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="time"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="State">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x672a;&#x5904;&#x7406;&quot;"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                <classifercall entity="Application" op="allInstance()"/>
+                <standardOP name="includes" object="a"/>
+              </leftside>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+            </atomicexp>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+          </inExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|554"/>
+      <op name="inputByTeacher">
+        <parameter name="roomID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="time">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="time"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="100"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|555"/>
+      <op name="inputCreateStudent">
+        <parameter name="roomID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="time">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="time"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="100"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|556"/>
+      <op name="createByStudent">
+        <parameter name="roomID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="time">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="time"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="100"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LetExpCS">
+          <variable name="a">
+            <type xsi:type="rEMODEL:EntityType">
+              <entity href="classroomms.remodel#|557"/>
+            </type>
+          </variable>
+          <inExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                <object symbol="a"/>
+                <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+              </leftside>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="ApplicationID">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="roomID"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="RoomID">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="roomID"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccounID">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="UseTime">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="time"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="State">
+                <name symbol="a"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x672a;&#x5904;&#x7406;&quot;"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                <classifercall entity="Application" op="allInstance()"/>
+                <standardOP name="includes" object="a"/>
+              </leftside>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+            </atomicexp>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+          </inExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|558"/>
+      <op name="inputWithdrawInfoT">
+        <parameter name="applicationID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="al">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|559"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Application" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|560"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="ApplicationID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="applicationID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="al"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression">
+            <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+              <classifercall entity="Application" op="allInstance()"/>
+              <standardOP name="includes" object="al"/>
+            </leftside>
+          </atomicexp>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression">
+            <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+              <classifercall entity="Application" op="allInstance()"/>
+              <standardOP name="excludes" object="al"/>
+            </leftside>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|561"/>
+      <op name="withdrawByTeacher">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|562"/>
+      <op name="inputWithdrawInfoS">
+        <parameter name="applicationID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="al">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|563"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Application" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|564"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="ApplicationID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="applicationID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="al"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression">
+            <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+              <classifercall entity="Application" op="allInstance()"/>
+              <standardOP name="includes" object="al"/>
+            </leftside>
+          </atomicexp>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression">
+            <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+              <classifercall entity="Application" op="allInstance()"/>
+              <standardOP name="excludes" object="al"/>
+            </leftside>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|565"/>
+      <op name="withdrawByStudent">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="return"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|566"/>
+      <op name="modifyInfo">
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <pre>
+        <oclexp xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|567"/>
+      <op name="modifyByTeacher">
+        <parameter name="new_name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_age">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="new_gender">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|568"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|569"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="t">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|570"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Teacher" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|571"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="t"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_name"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop=">">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+                <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="0"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+                <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="150"/>
+              </atomicexp>
+              <connector>and</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7537;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5973;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_password"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_name"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Age">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Gender">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|572"/>
+      <op name="modifyByStudent">
+        <parameter name="new_name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_age">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="new_gender">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|573"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|574"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="t">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|575"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Student" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|576"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="self"/>
+                      <selfproperty symbol="account"/>
+                    </rightside>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="t"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_name"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop=">">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+                <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="0"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+                <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="150"/>
+              </atomicexp>
+              <connector>and</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7537;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5973;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="acPassword"/>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_password"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_name"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Age">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Gender">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|577"/>
+      <op name="editTeacher">
+        <parameter name="new_teacherID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_type">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="adminID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|578"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|579"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="account_ed">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|580"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|581"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="t">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|582"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Teacher" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|583"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="account_ed"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="t"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_teacherID"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x6559;&#x5e08;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5b66;&#x751f;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="account_ed"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+              <name symbol="account_ed"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_password"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="TeacherID">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_teacherID"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|584"/>
+      <op name="editStudent">
+        <parameter name="new_studentID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_type">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="adminID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|585"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|586"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="account_ed">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|587"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|588"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="t">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|589"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Student" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|590"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="account_ed"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="t"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_studentID"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x6559;&#x5e08;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5b66;&#x751f;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="account_ed"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_type"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+              <name symbol="account_ed"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_password"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="StudentID">
+              <name symbol="t"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_studentID"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|591"/>
+      <op name="editSelf">
+        <parameter name="new_name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_age">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="new_gender">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="new_adminID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|592"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|593"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="a">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|594"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Admin" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|595"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="a"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_name"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="new_password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop=">">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+                <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="0"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+                <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="150"/>
+              </atomicexp>
+              <connector>and</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7537;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5973;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+              <name symbol="a"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_name"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Age">
+              <name symbol="a"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_age"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Gender">
+              <name symbol="a"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_gender"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+              <name symbol="ac"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_password"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AdminID">
+              <name symbol="a"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="new_adminID"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|596"/>
+      <op name="addTeacher">
+        <parameter name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="age">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="gender">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="teacherID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="type">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="teacher">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|597"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Teacher" op="allInstance()"/>
+                <varibles name="teacher">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|598"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="TeacherID">
+                      <name symbol="teacher"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="teacherID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="name"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="10"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop=">">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="0"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="150"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7537;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5973;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="teacherID"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="type"/>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x6559;&#x5e08;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="teacher"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LetExpCS">
+          <variable name="a">
+            <type xsi:type="rEMODEL:EntityType">
+              <entity href="classroomms.remodel#|599"/>
+            </type>
+          </variable>
+          <inExpression xsi:type="rEMODEL:LetExpCS">
+            <variable name="b">
+              <type xsi:type="rEMODEL:EntityType">
+                <entity href="classroomms.remodel#|600"/>
+              </type>
+            </variable>
+            <inExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                  <object symbol="a"/>
+                  <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                  <object symbol="b"/>
+                  <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="name"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Age">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Gender">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="TeacherID">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="teacherID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="teacherID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                  <classifercall entity="Teacher" op="allInstance()"/>
+                  <standardOP name="includes" object="a"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="teacherID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x6559;&#x5e08;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                  <classifercall entity="Account" op="allInstance()"/>
+                  <standardOP name="includes" object="b"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+                <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+              </atomicexp>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+            </inExpression>
+          </inExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|601"/>
+      <op name="addStudent">
+        <parameter name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="age">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="gender">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="studentID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="type">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="student">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|602"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Student" op="allInstance()"/>
+                <varibles name="student">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|603"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="StudentID">
+                      <name symbol="student"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="studentID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="name"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="10"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop=">">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="0"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="150"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:NestedExpCS">
+            <nestedExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7537;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5973;&quot;"/>
+              </atomicexp>
+              <connector>or</connector>
+            </nestedExpression>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="studentID"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="&lt;">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="password"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="size()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:NumberLiteralExpCS" symbol="20"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="type"/>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5b66;&#x751f;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="student"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LetExpCS">
+          <variable name="a">
+            <type xsi:type="rEMODEL:EntityType">
+              <entity href="classroomms.remodel#|604"/>
+            </type>
+          </variable>
+          <inExpression xsi:type="rEMODEL:LetExpCS">
+            <variable name="b">
+              <type xsi:type="rEMODEL:EntityType">
+                <entity href="classroomms.remodel#|605"/>
+              </type>
+            </variable>
+            <inExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                  <object symbol="a"/>
+                  <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                  <object symbol="b"/>
+                  <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="name"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Age">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Gender">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="StudentID">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="studentID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="studentID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                  <classifercall entity="Student" op="allInstance()"/>
+                  <standardOP name="includes" object="a"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="studentID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x5b66;&#x751f;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                  <classifercall entity="Account" op="allInstance()"/>
+                  <standardOP name="includes" object="b"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+                <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+              </atomicexp>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+            </inExpression>
+          </inExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|606"/>
+      <op name="addAdmin">
+        <parameter name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="age">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="gender">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="adminID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="type">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="admin">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|607"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Admin" op="allInstance()"/>
+                <varibles name="admin">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|608"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AdminID">
+                      <name symbol="admin"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="admin"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LetExpCS">
+          <variable name="a">
+            <type xsi:type="rEMODEL:EntityType">
+              <entity href="classroomms.remodel#|609"/>
+            </type>
+          </variable>
+          <inExpression xsi:type="rEMODEL:LetExpCS">
+            <variable name="b">
+              <type xsi:type="rEMODEL:EntityType">
+                <entity href="classroomms.remodel#|610"/>
+              </type>
+            </variable>
+            <inExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                  <object symbol="a"/>
+                  <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                  <object symbol="b"/>
+                  <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="name"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Age">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="age"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Gender">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="gender"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AdminID">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                  <name symbol="a"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                  <classifercall entity="Admin" op="allInstance()"/>
+                  <standardOP name="includes" object="a"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminID"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+                  <name symbol="b"/>
+                </leftside>
+                <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression">
+                <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                  <classifercall entity="Account" op="allInstance()"/>
+                  <standardOP name="includes" object="b"/>
+                </leftside>
+              </atomicexp>
+              <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+                <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+              </atomicexp>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+              <connector>and</connector>
+            </inExpression>
+          </inExpression>
+        </oclexp>
+      </post>
+    </contract>
+    <contract>
+      <service href="classroomms.remodel#|611"/>
+      <op name="deleteByAdmin">
+        <parameter name="accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="adminPassword">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="ad_accountID">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="ac">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|612"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|613"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+        <variable name="ad">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="classroomms.remodel#|614"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="Account" op="allInstance()"/>
+                <varibles name="c">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="classroomms.remodel#|615"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="AccountID">
+                      <name symbol="c"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="ad_accountID"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ac"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="ad"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="false"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Type">
+              <name symbol="ad"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:StringLiteralExpCS" symbol="&quot;&#x7ba1;&#x7406;&#x5458;&quot;"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+              <name symbol="ad"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:VariableExpCS" symbol="adminPassword"/>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression">
+            <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+              <classifercall entity="Account" op="allInstance()"/>
+              <standardOP name="includes" object="ac"/>
+            </leftside>
+          </atomicexp>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+          <connector>and</connector>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression">
+            <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+              <classifercall entity="Account" op="allInstance()"/>
+              <standardOP name="excludes" object="account_de"/>
+            </leftside>
+          </atomicexp>
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+          <connector>and</connector>
+        </oclexp>
+      </post>
+    </contract>
+  </UseCaseModel>
+  <DomainModel name="ClassroomMS">
+    <entity name="Student">
+      <superEntity href="classroomms.remodel#|616"/>
+      <attributes name="StudenID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="StudenttoAccount" type="Association">
+        <entity href="classroomms.remodel#|617"/>
+      </reference>
+    </entity>
+    <entity name="Teacher">
+      <superEntity href="classroomms.remodel#|618"/>
+      <attributes name="TeacherID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="TeachertoAccount" type="Association">
+        <entity href="classroomms.remodel#|619"/>
+      </reference>
+    </entity>
+    <entity name="Account">
+      <attributes name="AccountID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Password">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Type">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="AccounttoAdmin" isReverseAssoication="true" type="Association">
+        <entity href="classroomms.remodel#|620"/>
+      </reference>
+      <reference name="AccounttoTeacher" isReverseAssoication="true" type="Association">
+        <entity href="classroomms.remodel#|621"/>
+      </reference>
+      <reference name="AccounttoStudent" isReverseAssoication="true" type="Association">
+        <entity href="classroomms.remodel#|622"/>
+      </reference>
+      <reference name="AccounttoMessage" ismultiple="true" type="Association">
+        <entity href="classroomms.remodel#|623"/>
+      </reference>
+      <reference name="AccounttoApplication" ismultiple="true" type="Association">
+        <entity href="classroomms.remodel#|624"/>
+      </reference>
+    </entity>
+    <entity name="Admin">
+      <superEntity href="classroomms.remodel#|625"/>
+      <attributes name="AdminID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="AdmintoAccount" type="Association">
+        <entity href="classroomms.remodel#|626"/>
+      </reference>
+    </entity>
+    <entity name="People">
+      <attributes name="Age">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Gender">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Name">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="AccountID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+    </entity>
+    <entity name="Application">
+      <attributes name="ApplicationID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="RoomID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="AccountID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="UseTime">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Date"/>
+      </attributes>
+      <attributes name="State">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="ApplicationtoAccount" isReverseAssoication="true" type="Association">
+        <entity href="classroomms.remodel#|627"/>
+      </reference>
+      <reference name="ApplicationtoClassroom" type="Association">
+        <entity href="classroomms.remodel#|628"/>
+      </reference>
+    </entity>
+    <entity name="Classroom">
+      <attributes name="RoomID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="State">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="ClassroomtoApplication" ismultiple="true" isReverseAssoication="true" type="Association">
+        <entity href="classroomms.remodel#|629"/>
+      </reference>
+    </entity>
+    <entity name="Message">
+      <attributes name="MessageID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Content">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Time">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Date"/>
+      </attributes>
+      <reference name="MessagetoAccount" isReverseAssoication="true" type="Association">
+        <entity href="classroomms.remodel#|630"/>
+      </reference>
+    </entity>
+  </DomainModel>
+</rEMODEL:RequirementModel>

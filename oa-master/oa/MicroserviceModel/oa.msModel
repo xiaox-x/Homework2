@@ -1,0 +1,69 @@
+MicroServiceModel OA {
+	MicroService AdminService {
+		ProvidedInterface processApplication{
+			[Operation]
+			processApplication
+		}
+		DomainModel AdminService {
+		}
+	}
+	MicroService ApproveService {
+		ProvidedInterface viewUsage{
+			[Operation]
+			viewUsage
+		}
+		DomainModel ApproveService {
+		}
+	}
+	MicroService ApplicantService {
+		ProvidedInterface login{
+			[Operation]
+			login
+		}
+		DomainModel ApplicantService {
+		}
+	}
+	MicroService ClassroomService {
+		ProvidedInterface createApplication{
+			[Operation]
+			createApplication
+		}
+		ProvidedInterface withdrawApplication{
+			[Operation]
+			withdrawApplication
+		}
+		DomainModel OAService {
+		}
+	}
+	MicroService AccountService {
+		ProvidedInterface manageUser{
+			[Operation]
+			createUser
+			queryUser
+			updateUser
+			modifyUser
+		}
+		ProvidedInterface deleteUser{
+			[Operation]
+			deleteUser
+		}
+		ProvidedInterface addUser{
+			[Operation]
+			addUser
+		}
+		ProvidedInterface editUser{
+			[Operation]
+			editUser
+		}
+		ProvidedInterface modifyInfo{
+			[Operation]
+			modifyInfo
+		}
+		DomainModel AccountService {
+		}
+	}
+	MicroService MessageService {
+		DomainModel MessageService {
+		}
+	}
+}
