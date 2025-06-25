@@ -15,8 +15,8 @@
 共9个，位置及展示如图
 
 ### 类图
-<img src="https://gitee.com/image-md/img/raw/master/微信截图_20231027143246.png" style="zoom: 33%;" />
-共设计了8个实体类
+![image](https://github.com/user-attachments/assets/2d6d34db-06a5-498f-a55b-1f3b37275c6d)
+概念类图8个
 
 ### 结构化自然语言
 ![image](https://github.com/user-attachments/assets/f879e305-eb47-472e-9bf5-242c838a0045)
